@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsOrbit | Your Daily Dose of Global News</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" id="logo-home">
+                 <img src="news.png" alt="NewsPulse Logo" class="logo-img">
+                <span>NewsOrbit</span>
+            </div>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#" class="nav-link active" data-category="general">Home</a>
+                <a href="#" class="nav-link" data-category="technology">Technology</a>
+                <a href="#" class="nav-link" data-category="business">Business</a>
+                <a href="#" class="nav-link" data-category="sports">Sports</a>
+                <a href="#" class="nav-link" data-category="entertainment">Entertainment</a>
+                <a href="#" class="nav-link" data-category="health">Health</a>
+                <a href="#" class="nav-link" data-category="science">Science</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search news...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button id="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button id="bookmarks-btn" title="View Bookmarks">
+                    <i class="fas fa-bookmark"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section / Featured News -->
+        <section class="hero-section" id="hero-section">
+            <div class="hero-card" id="featured-news">
+                <!-- Featured news will be injected here -->
+                <div class="skeleton hero-skeleton"></div>
+            </div>
+        </section>
+
+        <!-- Breaking News Ticker -->
+        <div class="ticker-wrap">
+            <div class="ticker-title">Breaking News</div>
+            <div class="ticker" id="news-ticker">
+                <div class="ticker-item">Fetching latest headlines...</div>
+            </div>
+        </div>
+
+        <!-- News Grid Section -->
+        <section class="news-section">
+            <div class="section-header">
+                <h2 id="category-title">Latest Headlines</h2>
+                <div class="view-options">
+                    <button class="view-btn active" id="grid-view"><i class="fas fa-th-large"></i></button>
+                    <button class="view-btn" id="list-view"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <div class="news-grid" id="news-grid">
+                <!-- News cards will be injected here -->
+                <!-- Skeletons for loading state -->
+                <div class="skeleton card-skeleton"></div>
+                <div class="skeleton card-skeleton"></div>
+                <div class="skeleton card-skeleton"></div>
+                <div class="skeleton card-skeleton"></div>
+                <div class="skeleton card-skeleton"></div>
+                <div class="skeleton card-skeleton"></div>
+            </div>
+
+            <div class="load-more-container">
+                <button id="load-more" class="btn-primary">Load More Articles</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bookmarks Modal -->
+    <div id="bookmarks-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Your Bookmarks</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div id="bookmarks-list" class="bookmarks-list">
+                <p class="empty-msg">No bookmarks saved yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>NewsOrbit</span>
+                </div>
+                <p>Stay updated with the latest news from around the world. Your trusted source for real-time information.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" data-category="general">General</a></li>
+                    <li><a href="#" data-category="technology">Technology</a></li>
+                    <li><a href="#" data-category="business">Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-trending">
+                <h4>Trending Topics</h4>
+                <br>
+                <div class="trending-links">
+                    <a href="#" data-category="general">📰 Trending</a>
+                    <a href="#" data-category="general">🌍 World</a>
+                    <a href="#" data-category="general">⚡ Breaking</a>
+                    <a href="#" data-category="technology">📈 Technology</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NewsOrbit. Designed &amp; Developed by Vaishnavi.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
