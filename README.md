@@ -49,6 +49,9 @@ A modern and responsive news website built using HTML, CSS, and JavaScript. News
 2. Add your News API key in `script.js`
 3. Open `index.html` in your browser
 
+Live Demo
+https://vaishnavi0221.github.io/NewsOrbit/
+
 ## API Used
 
 News API  
